@@ -41,8 +41,8 @@
 	<bean id="collaborationDataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
 	    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
 	    <property name="url" value="jdbc:mysql://localhost:3306/iddd_collaboration" />
-	    <property name="username" value="root" />
-	    <property name="password" value="root" />
+	    <property name="username" value="iddd" />
+	    <property name="password" value="iddd" />
 	    <property name="initialSize" value="1" />
 	    <property name="maxActive" value="5" />
 	    <property name="defaultAutoCommit" value="false" />
