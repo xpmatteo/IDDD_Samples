@@ -15,6 +15,7 @@
 package com.saasovation.agilepm.domain.model.product.backlogitem;
 
 import java.text.NumberFormat;
+import java.util.*;
 
 import com.saasovation.agilepm.domain.model.DomainTest;
 
@@ -22,6 +23,7 @@ public class BusinessPriorityTest extends DomainTest {
 
     public BusinessPriorityTest() {
         super();
+        Locale.setDefault(Locale.ENGLISH);
     }
 
     public void testCostPercentageCalculation() throws Exception {
