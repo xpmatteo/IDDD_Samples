@@ -15,6 +15,10 @@ subprojects {
 
     dependencies {
         compile group: 'org.slf4j', name: 'slf4j-api', version: '1.5.8'
+        compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.5.8'
+        compile group: 'log4j', name: 'log4j', version: '1.2.17'
+        compile group: 'commons-codec', name: 'commons-codec', version: '1.8'
+        testCompile group: 'commons-pool', name: 'commons-pool', version: '1.6'
         testCompile group: 'junit', name: 'junit', version: '4.8.2'
     }
 }
@@ -35,7 +39,6 @@ project(':iddd_common') {
         testCompile group: 'javax.persistence', name: 'persistence-api', version: '1.0.2'
         testCompile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
         testCompile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
-        testCompile group: 'commons-pool', name: 'commons-pool', version: '1.6'
     }
 }
 
@@ -44,7 +47,7 @@ project(':iddd_identityaccess') {
         compile project(':iddd_common')
         compile group: 'org.springframework', name: 'spring', version: '2.5.6'
         compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0-rc1'
-        compile group: 'org.jboss.resteasy', name: 'resteasy-cache-core', version: '2.0.1.GA'
+        compile group: 'org.jboss.resteasy', name: 'resteasy-cache-core', version: '2.3.5.Final'
 
         testCompile files(this.project(':iddd_common').sourceSets.test.output)
         testCompile group: 'javax.persistence', name: 'persistence-api', version: '1.0.2'
@@ -58,7 +61,7 @@ project(':iddd_identityaccess') {
 project(':iddd_collaboration') {
     dependencies {
         compile project(':iddd_common')
-        compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '2.0.1.GA'
+        compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '2.3.5.Final'
 
         testCompile files(this.project(':iddd_common').sourceSets.test.output)
         testCompile group: 'javax.persistence', name: 'persistence-api', version: '1.0.2'
